@@ -30,7 +30,7 @@
     [leftBarBtn addTarget:self action:@selector(leftBtnPressed) forControlEvents:UIControlEventTouchUpInside];
     [NAV_ITEM setTitleView:navTitle];
     [NAV_ITEM setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:leftBarBtn]];
-    [NAV_BAR setBarTintColor:RGB(230, 0, 92)];
+    [NAV_BAR setBarTintColor:RGB(115, 140, 6)];
 }
 - (void)leftBtnPressed {
     [NAV_CONTROLLER popToRootViewControllerAnimated:YES];

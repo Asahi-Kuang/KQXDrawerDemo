@@ -31,7 +31,10 @@ static NSString *const reuseIdentifier = @"identifier";
     // 注册cell
     [_tableView registerNib:[UINib nibWithNibName:@"MainTableViewCell" bundle:nil] forCellReuseIdentifier:reuseIdentifier];
 }
-
+-(void)viewDidAppear:(BOOL)animated {
+    [_swipe setDirection:UISwipeGestureRecognizerDirectionRight];
+    [self.tableView setUserInteractionEnabled:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -58,7 +61,7 @@ static NSString *const reuseIdentifier = @"identifier";
     [leftBarBtn addTarget:self action:@selector(leftBtnPressed) forControlEvents:UIControlEventTouchUpInside];
     [NAV_ITEM setTitleView:navTitle];
     [NAV_ITEM setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:leftBarBtn]];
-    [NAV_BAR setBarTintColor:RGB(230, 0, 92)];
+    [NAV_BAR setBarTintColor:RGB(115, 140, 6)];
     
     
     _swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(leftBtnPressed)];

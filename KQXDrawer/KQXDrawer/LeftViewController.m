@@ -65,7 +65,7 @@ static NSString *const reuseIdentifier = @"identifier";
     // 实现分离出去的dataSource
     cellConfigureBlock block = ^(UITableViewCell *cell, NSString *item) {
         [cell setBackgroundColor:[UIColor clearColor]];
-        [cell.textLabel setTextColor:RGB(221, 55, 0)];
+        [cell.textLabel setTextColor:RGB(58, 33, 47)];
         [cell.textLabel setFont:BOLD(18.F)];
         [cell.textLabel setTextAlignment:NSTextAlignmentLeft];
         [cell setSelectionStyle:UITableViewCellSelectionStyleBlue];

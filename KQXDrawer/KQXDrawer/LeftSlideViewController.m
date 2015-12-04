@@ -51,7 +51,7 @@
             }
         }
         
-        [self.tableView setFrame:REACT_MAKE(0, 165, REACT_WIDTH(FRAME) - SCREEN_WIDTH/2+25, REACT_HEIGHT(FRAME) - 150)];
+        [self.tableView setFrame:REACT_MAKE(0, 165, REACT_WIDTH(FRAME) - SCREEN_WIDTH/2+65, REACT_HEIGHT(FRAME) - 150)];
         self.tableViewCenter = self.tableView.center;
         MAKE_SCALE(self.tableView, 0.1f, 0.1f);
         [self.tableView setCenter:CGPointMake(-REACT_WIDTH(self.tableView.frame), REACT_MINY(self.tableView.frame))];
@@ -80,8 +80,8 @@
     
     [UIView animateWithDuration:0.8f delay:0 usingSpringWithDamping:0.7f initialSpringVelocity:0.1f options:UIViewAnimationOptionCurveLinear animations:^{
         //
-        MAKE_SCALE(self.mainVc.view, 0.75f, 0.75f);
-        [self.mainVc.view setCenter:CGPointMake(REACT_WIDTH(FRAME) - 25, REACT_HEIGHT(FRAME)/2)];
+        MAKE_SCALE(self.mainVc.view, 0.65f, 0.65f);
+        [self.mainVc.view setCenter:CGPointMake(REACT_WIDTH(FRAME), REACT_HEIGHT(FRAME)/2)];
         
         MAKE_SCALE(self.tableView, 1, 1);
         [self.tableView setCenter:self.tableViewCenter];
