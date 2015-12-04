@@ -40,10 +40,6 @@
         self.leftVc = leftVC;
         self.mainVc = mainVC;
         
-        // 滑动手势
-        self.panGes = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGesHandler:)];
-        [self.leftVc.view addGestureRecognizer:self.panGes];
-        
         // 左边视图tableView获取
         for (UIView *view in self.leftVc.view.subviews) {
             if ([view isKindOfClass:[UITableView class]]) {
@@ -51,7 +47,7 @@
             }
         }
         
-        [self.tableView setFrame:REACT_MAKE(0, 165, REACT_WIDTH(FRAME) - SCREEN_WIDTH/2+65, REACT_HEIGHT(FRAME) - 150)];
+        [self.tableView setFrame:REACT_MAKE(0, 180, REACT_WIDTH(FRAME) - SCREEN_WIDTH/2+65, REACT_HEIGHT(FRAME) - 150)];
         self.tableViewCenter = self.tableView.center;
         MAKE_SCALE(self.tableView, 0.1f, 0.1f);
         [self.tableView setCenter:CGPointMake(-REACT_WIDTH(self.tableView.frame), REACT_MINY(self.tableView.frame))];
@@ -65,7 +61,7 @@
             }
         }
         
-        [self.userIcon setFrame:REACT_MAKE(50, 55, 100, 100)];
+        [self.userIcon setFrame:REACT_MAKE(75, 55, 100, 100)];
         MAKE_SCALE(self.userIcon, 0.1f, 0.1f);
         
         [self.view addSubview:self.leftVc.view];
@@ -89,8 +85,8 @@
         MAKE_SCALE(self.userIcon, 1, 1);
     } completion:^(BOOL finished) {
         //
+        _isOpend = YES;
     }];
-    _isOpend = YES;
 }
 
 - (void)closeLeftViewController {
@@ -104,18 +100,12 @@
     } completion:^(BOOL finished) {
         //
         [self.leftVc.view removeFromSuperview];
+        _isOpend = NO;
     }];
-    _isOpend = NO;
+    
 }
 
-- (void)setPanGesEnabled:(BOOL)isEnable {
-    [self.panGes setEnabled:isEnable];
-}
 
-#pragma mark - selector
-- (void)panGesHandler:(UIPanGestureRecognizer *)pan {
-    [self closeLeftViewController];
-}
 
 
 @end

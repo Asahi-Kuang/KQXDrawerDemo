@@ -31,7 +31,7 @@ static NSString *const reuseIdentifier = @"identifier";
     // 注册cell
     [_tableView registerNib:[UINib nibWithNibName:@"MainTableViewCell" bundle:nil] forCellReuseIdentifier:reuseIdentifier];
 }
--(void)viewDidAppear:(BOOL)animated {
+-(void)viewWillAppear:(BOOL)animated {
     [_swipe setDirection:UISwipeGestureRecognizerDirectionRight];
     [self.tableView setUserInteractionEnabled:YES];
 }
@@ -55,17 +55,30 @@ static NSString *const reuseIdentifier = @"identifier";
     [navTitle setTextAlignment:NSTextAlignmentCenter];
     [navTitle setTextColor:RGB(255, 255, 255)];
     [navTitle setFont:BOLD(20.f)];
-    UIButton *leftBarBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [leftBarBtn setFrame:REACT_MAKE(0, 0, 40, 40)];
-    [leftBarBtn setImage:[UIImage imageNamed:@"LeftBarItem"] forState:UIControlStateNormal];
-    [leftBarBtn addTarget:self action:@selector(leftBtnPressed) forControlEvents:UIControlEventTouchUpInside];
+
+    UIButton *leftBarBtn = [self getButtonWithButtonType:UIButtonTypeCustom withFrame:REACT_MAKE(0, 0, 40, 40) withTarget:self withAction:@selector(leftBtnPressed) forControlEvents:UIControlEventTouchUpInside withImage:[UIImage imageNamed:@"LeftBarItem"]];
+    UIButton *rightBarBtn = [self getButtonWithButtonType:UIButtonTypeCustom withFrame:REACT_MAKE(0, 0, 40, 40) withTarget:self withAction:@selector(rightBtnPressed) forControlEvents:UIControlEventTouchUpInside withImage:[UIImage imageNamed:@"setting"]];
+    
     [NAV_ITEM setTitleView:navTitle];
+    [NAV_ITEM setRightBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:rightBarBtn]];
     [NAV_ITEM setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:leftBarBtn]];
     [NAV_BAR setBarTintColor:RGB(115, 140, 6)];
     
-    
     _swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(leftBtnPressed)];
     [self.view addGestureRecognizer:_swipe];
+}
+
+#pragma mark - button make
+- (UIButton *)getButtonWithButtonType:(UIButtonType)buttonType
+                            withFrame:(CGRect)frame withTarget:(id)target
+                           withAction:(SEL)action
+                     forControlEvents:(UIControlEvents)event withImage:(UIImage *)image {
+    
+    UIButton *button = [UIButton buttonWithType:buttonType];
+    [button setFrame:frame];
+    [button addTarget:target action:action forControlEvents:event];
+    [button setImage:image forState:UIControlStateNormal];
+    return button;
 }
 
 #pragma mark - setUpTableView
@@ -99,6 +112,10 @@ static NSString *const reuseIdentifier = @"identifier";
         [_swipe setDirection:UISwipeGestureRecognizerDirectionLeft];
         [self.tableView setUserInteractionEnabled:NO];
     }
+}
+
+- (void)rightBtnPressed {
+    
 }
 
 #pragma mark - UITableViewDelegate

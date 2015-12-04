@@ -16,7 +16,7 @@
 @property (strong, nonatomic) UIViewController *mainVc;
 
 @property (strong, nonatomic) UITapGestureRecognizer *tapGes;
-@property (strong, nonatomic) UIPanGestureRecognizer *panGes;
+//@property (strong, nonatomic) UIPanGestureRecognizer *panGes;
 
 @property (assign, nonatomic) BOOL isOpend;
 
