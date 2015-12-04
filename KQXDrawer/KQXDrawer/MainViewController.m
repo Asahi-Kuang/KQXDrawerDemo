@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "AppDelegate.h"
 #import "MainTableViewCell.h"
+#import "MenuPushViewController.h"
 
 static NSString *const reuseIdentifier = @"identifier";
 @interface MainViewController ()<UITableViewDelegate>
@@ -61,21 +62,20 @@ static NSString *const reuseIdentifier = @"identifier";
     
     
     _swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(leftBtnPressed)];
-//    [self.tableView addGestureRecognizer:_swipe];
+    [self.view addGestureRecognizer:_swipe];
 }
 
 #pragma mark - setUpTableView
 - (void)setUpTableView {
     _tableView = [[UITableView alloc] initWithFrame:FRAME style:UITableViewStylePlain];
     [_tableView setDelegate:self];
-    [_tableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLineEtched];
+    [_tableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
     [_tableView setTableFooterView:[UIView new]];
-    self.view = _tableView;
+    [self.view addSubview:_tableView];
     
     // 这里使用自定义cell
     cellConfigureBlock block = ^(MainTableViewCell *cell, NSString *item) {
         [cell.cellLb setText:item];
-        [cell addGestureRecognizer:_swipe];
     };
     NSArray *tools = @[@"Objective-C", @"Swift", @"Javascript", @"HTML5", @"React-Native", @"Java", @"SQLite", @"..."];
     [self.dataArray addObjectsFromArray:tools];
@@ -89,10 +89,12 @@ static NSString *const reuseIdentifier = @"identifier";
     if (deleg.leftSlideVC.isOpend) {
         [deleg.leftSlideVC closeLeftViewController];
         [_swipe setDirection:UISwipeGestureRecognizerDirectionRight];
+        [self.tableView setUserInteractionEnabled:YES];
     }
     else {
         [deleg.leftSlideVC openLeftViewController];
         [_swipe setDirection:UISwipeGestureRecognizerDirectionLeft];
+        [self.tableView setUserInteractionEnabled:NO];
     }
 }
 
@@ -107,6 +109,9 @@ static NSString *const reuseIdentifier = @"identifier";
     if (deleg.leftSlideVC.isOpend) {
         [deleg.leftSlideVC closeLeftViewController];
     }
+    MenuPushViewController *mpVC = [[MenuPushViewController alloc] init];
+    [mpVC setNavTitleStr:self.dataArray[indexPath.row]];
+    [NAV_CONTROLLER pushViewController:mpVC animated:YES];
 }
 /*
 #pragma mark - Navigation

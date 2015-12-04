@@ -20,6 +20,7 @@
 		413581651C115DC2002688E9 /* ArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 413581641C115DC2002688E9 /* ArrayDataSource.m */; };
 		413581691C1178D2002688E9 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 413581671C1178D2002688E9 /* MainTableViewCell.m */; };
 		4135816A1C1178D2002688E9 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 413581681C1178D2002688E9 /* MainTableViewCell.xib */; };
+		4135816D1C11A216002688E9 /* MenuPushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4135816C1C11A216002688E9 /* MenuPushViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		413581661C1178D2002688E9 /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
 		413581671C1178D2002688E9 /* MainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
 		413581681C1178D2002688E9 /* MainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		4135816B1C11A216002688E9 /* MenuPushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuPushViewController.h; sourceTree = "<group>"; };
+		4135816C1C11A216002688E9 /* MenuPushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuPushViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +133,8 @@
 				413581681C1178D2002688E9 /* MainTableViewCell.xib */,
 				4135815C1C114300002688E9 /* LeftSlideViewController.h */,
 				4135815D1C114300002688E9 /* LeftSlideViewController.m */,
+				4135816B1C11A216002688E9 /* MenuPushViewController.h */,
+				4135816C1C11A216002688E9 /* MenuPushViewController.m */,
 				4135815F1C11431A002688E9 /* KQXDrawerPrefix.pch */,
 				413581601C114381002688E9 /* Headers.h */,
 				4135812C1C1142CC002688E9 /* Main.storyboard */,
@@ -306,6 +311,7 @@
 				413581281C1142CC002688E9 /* AppDelegate.m in Sources */,
 				413581251C1142CC002688E9 /* main.m in Sources */,
 				4135815B1C1142F5002688E9 /* MainViewController.m in Sources */,
+				4135816D1C11A216002688E9 /* MenuPushViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +539,7 @@
 				4135814F1C1142CC002688E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		413581501C1142CC002688E9 /* Build configuration list for PBXNativeTarget "KQXDrawerTests" */ = {
 			isa = XCConfigurationList;
@@ -541,6 +548,7 @@
 				413581521C1142CC002688E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		413581531C1142CC002688E9 /* Build configuration list for PBXNativeTarget "KQXDrawerUITests" */ = {
 			isa = XCConfigurationList;
@@ -549,6 +557,7 @@
 				413581551C1142CC002688E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
