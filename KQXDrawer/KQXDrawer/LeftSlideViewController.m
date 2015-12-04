@@ -50,7 +50,8 @@
                 self.tableView = (UITableView *) view;
             }
         }
-        [self.tableView setFrame:REACT_MAKE(0, 165, REACT_WIDTH(FRAME), REACT_HEIGHT(FRAME) - 150)];
+        
+        [self.tableView setFrame:REACT_MAKE(0, 165, REACT_WIDTH(FRAME) - SCREEN_WIDTH/2+25, REACT_HEIGHT(FRAME) - 150)];
         self.tableViewCenter = self.tableView.center;
         MAKE_SCALE(self.tableView, 0.1f, 0.1f);
         [self.tableView setCenter:CGPointMake(-REACT_WIDTH(self.tableView.frame), REACT_MINY(self.tableView.frame))];
@@ -64,7 +65,7 @@
             }
         }
         
-        [self.userIcon setFrame:REACT_MAKE(65, 70, 80, 80)];
+        [self.userIcon setFrame:REACT_MAKE(50, 55, 100, 100)];
         MAKE_SCALE(self.userIcon, 0.1f, 0.1f);
         
         [self.view addSubview:self.leftVc.view];
@@ -74,6 +75,9 @@
 }
 
 - (void)openLeftViewController {
+    [self.view addSubview:self.leftVc.view];
+    [self.view addSubview:self.mainVc.view];
+    
     [UIView animateWithDuration:0.8f delay:0 usingSpringWithDamping:0.7f initialSpringVelocity:0.1f options:UIViewAnimationOptionCurveLinear animations:^{
         //
         MAKE_SCALE(self.mainVc.view, 0.75f, 0.75f);
@@ -85,7 +89,6 @@
         MAKE_SCALE(self.userIcon, 1, 1);
     } completion:^(BOOL finished) {
         //
-        
     }];
     _isOpend = YES;
 }
@@ -100,6 +103,7 @@
         MAKE_SCALE(self.userIcon, 0.1f, 0.1f);
     } completion:^(BOOL finished) {
         //
+        [self.leftVc.view removeFromSuperview];
     }];
     _isOpend = NO;
 }

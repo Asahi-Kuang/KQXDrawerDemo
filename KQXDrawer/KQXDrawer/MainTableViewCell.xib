@@ -14,7 +14,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="BOp-kD-d5X">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="user-2" translatesAutoresizingMaskIntoConstraints="NO" id="BOp-kD-d5X">
                         <rect key="frame" x="8" y="10" width="80" height="80"/>
                         <animations/>
                     </imageView>
@@ -36,6 +36,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="user" width="150" height="150"/>
+        <image name="user-2" width="150" height="150"/>
     </resources>
 </document>

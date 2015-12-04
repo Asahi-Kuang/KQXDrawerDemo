@@ -34,7 +34,7 @@
     self = [super init];
     if (self) {
         self.reuseIdentifier = identifier;
-        self.block = block;
+        self.block = [block copy];
         self.dataArray = items;
         self.isSystemCell = isSystem;
     }
@@ -55,6 +55,8 @@
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.reuseIdentifier];
         if (!cell) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:self.reuseIdentifier];
+            // 设置cell图片
+            [self setImageViewPicOfCell:cell atIndexPath:indexPath];
         }
         else {
             while ([cell.contentView.subviews lastObject]) {
@@ -69,6 +71,11 @@
         self.block(cell, item);
         return cell;
     }
+}
+
+- (void)setImageViewPicOfCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+     NSString *menuItemName = [NSString stringWithFormat:@"qfile_mpfile_menu_icon%ld", indexPath.row + 1];
+    [cell.imageView setImage:[UIImage imageNamed:menuItemName]];
 }
 
 /*

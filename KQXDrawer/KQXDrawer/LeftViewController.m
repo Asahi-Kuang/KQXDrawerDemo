@@ -8,6 +8,7 @@
 
 #import "LeftViewController.h"
 #import "AppDelegate.h"
+#import "MenuPushViewController.h"
 
 static NSString *const reuseIdentifier = @"identifier";
 @interface LeftViewController ()<UITableViewDelegate>
@@ -45,8 +46,10 @@ static NSString *const reuseIdentifier = @"identifier";
     [leftBgImage setImage:[UIImage imageNamed:@"backgroundPic"]];
     [self.view addSubview:leftBgImage];
     
-    UIImageView *userIcon = [[UIImageView alloc] initWithFrame:REACT_MAKE(65, 70, 80, 80)];
+    UIImageView *userIcon = [[UIImageView alloc] initWithFrame:REACT_MAKE(65, 70, 100, 100)];
     [userIcon setImage:[UIImage imageNamed:@"user"]];
+    [userIcon.layer setMasksToBounds:YES];
+    [userIcon.layer setCornerRadius:50.f];
     [userIcon setTag:ICON_TAG];
     [leftBgImage addSubview:userIcon];
 }
@@ -64,6 +67,7 @@ static NSString *const reuseIdentifier = @"identifier";
         [cell setBackgroundColor:[UIColor clearColor]];
         [cell.textLabel setTextColor:RGB(221, 55, 0)];
         [cell.textLabel setFont:BOLD(18.F)];
+        [cell.textLabel setTextAlignment:NSTextAlignmentLeft];
         [cell setSelectionStyle:UITableViewCellSelectionStyleBlue];
         [cell.textLabel setText:item];
     };
@@ -78,6 +82,10 @@ static NSString *const reuseIdentifier = @"identifier";
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     AppDelegate *deleg = [[UIApplication sharedApplication] delegate];
     [deleg.leftSlideVC closeLeftViewController];
+    
+    MenuPushViewController *mpVC = [[MenuPushViewController alloc] init];
+    [mpVC setNavTitleStr:self.dataArray[indexPath.row]];
+    [deleg.mainNav pushViewController:mpVC animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
