@@ -15,8 +15,8 @@
 @property (strong, nonatomic) UIViewController *leftVc;
 @property (strong, nonatomic) UIViewController *mainVc;
 
-@property (strong, nonatomic) UITapGestureRecognizer *tapGes;
-//@property (strong, nonatomic) UIPanGestureRecognizer *panGes;
+//@property (strong, nonatomic) UITapGestureRecognizer *tapGes;
+////@property (strong, nonatomic) UIPanGestureRecognizer *panGes;
 
 @property (assign, nonatomic) BOOL isOpend;
 
@@ -26,6 +26,6 @@
 - (void)openLeftViewController;
 - (void)closeLeftViewController;
 
-- (void)setPanGesEnabled:(BOOL)isEnable;
+//- (void)setPanGesEnabled:(BOOL)isEnable;
 
 @end
