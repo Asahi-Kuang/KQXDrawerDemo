@@ -1,0 +1,532 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4135817B1C11D15F002688E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4135817A1C11D15F002688E9 /* AppDelegate.swift */; };
+		413581801C11D15F002688E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4135817E1C11D15F002688E9 /* Main.storyboard */; };
+		413581821C11D15F002688E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 413581811C11D15F002688E9 /* Assets.xcassets */; };
+		413581851C11D15F002688E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 413581831C11D15F002688E9 /* LaunchScreen.storyboard */; };
+		413581901C11D15F002688E9 /* KXXDrawer_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4135818F1C11D15F002688E9 /* KXXDrawer_SwiftTests.swift */; };
+		4135819B1C11D15F002688E9 /* KXXDrawer_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4135819A1C11D15F002688E9 /* KXXDrawer_SwiftUITests.swift */; };
+		413581A91C11D1EB002688E9 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413581A81C11D1EB002688E9 /* LeftViewController.swift */; };
+		413581AB1C11D1F4002688E9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413581AA1C11D1F4002688E9 /* MainViewController.swift */; };
+		413581AD1C11D200002688E9 /* LeftSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413581AC1C11D200002688E9 /* LeftSlideViewController.swift */; };
+		41F38E541C12A2EE00DC6152 /* ArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F38E531C12A2EE00DC6152 /* ArrayDataSource.swift */; };
+		41F38E571C12C81F00DC6152 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F38E551C12C81F00DC6152 /* MainTableViewCell.swift */; };
+		41F38E581C12C81F00DC6152 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F38E561C12C81F00DC6152 /* MainTableViewCell.xib */; };
+		41F38E5A1C12D61600DC6152 /* NewPushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F38E591C12D61600DC6152 /* NewPushViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4135818C1C11D15F002688E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4135816F1C11D15F002688E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 413581761C11D15F002688E9;
+			remoteInfo = KXXDrawer_Swift;
+		};
+		413581971C11D15F002688E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4135816F1C11D15F002688E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 413581761C11D15F002688E9;
+			remoteInfo = KXXDrawer_Swift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		413581771C11D15F002688E9 /* KXXDrawer_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KXXDrawer_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4135817A1C11D15F002688E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4135817F1C11D15F002688E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		413581811C11D15F002688E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		413581841C11D15F002688E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		413581861C11D15F002688E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4135818B1C11D15F002688E9 /* KXXDrawer_SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KXXDrawer_SwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4135818F1C11D15F002688E9 /* KXXDrawer_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KXXDrawer_SwiftTests.swift; sourceTree = "<group>"; };
+		413581911C11D15F002688E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		413581961C11D15F002688E9 /* KXXDrawer_SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KXXDrawer_SwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4135819A1C11D15F002688E9 /* KXXDrawer_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KXXDrawer_SwiftUITests.swift; sourceTree = "<group>"; };
+		4135819C1C11D15F002688E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		413581A81C11D1EB002688E9 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
+		413581AA1C11D1F4002688E9 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		413581AC1C11D200002688E9 /* LeftSlideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftSlideViewController.swift; sourceTree = "<group>"; };
+		41F38E531C12A2EE00DC6152 /* ArrayDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayDataSource.swift; sourceTree = "<group>"; };
+		41F38E551C12C81F00DC6152 /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		41F38E561C12C81F00DC6152 /* MainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		41F38E591C12D61600DC6152 /* NewPushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPushViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		413581741C11D15F002688E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		413581881C11D15F002688E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		413581931C11D15F002688E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4135816E1C11D15F002688E9 = {
+			isa = PBXGroup;
+			children = (
+				413581791C11D15F002688E9 /* KXXDrawer_Swift */,
+				4135818E1C11D15F002688E9 /* KXXDrawer_SwiftTests */,
+				413581991C11D15F002688E9 /* KXXDrawer_SwiftUITests */,
+				413581781C11D15F002688E9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		413581781C11D15F002688E9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				413581771C11D15F002688E9 /* KXXDrawer_Swift.app */,
+				4135818B1C11D15F002688E9 /* KXXDrawer_SwiftTests.xctest */,
+				413581961C11D15F002688E9 /* KXXDrawer_SwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		413581791C11D15F002688E9 /* KXXDrawer_Swift */ = {
+			isa = PBXGroup;
+			children = (
+				4135817A1C11D15F002688E9 /* AppDelegate.swift */,
+				413581A81C11D1EB002688E9 /* LeftViewController.swift */,
+				413581AA1C11D1F4002688E9 /* MainViewController.swift */,
+				413581AC1C11D200002688E9 /* LeftSlideViewController.swift */,
+				41F38E551C12C81F00DC6152 /* MainTableViewCell.swift */,
+				41F38E591C12D61600DC6152 /* NewPushViewController.swift */,
+				41F38E561C12C81F00DC6152 /* MainTableViewCell.xib */,
+				41F38E531C12A2EE00DC6152 /* ArrayDataSource.swift */,
+				4135817E1C11D15F002688E9 /* Main.storyboard */,
+				413581811C11D15F002688E9 /* Assets.xcassets */,
+				413581831C11D15F002688E9 /* LaunchScreen.storyboard */,
+				413581861C11D15F002688E9 /* Info.plist */,
+			);
+			path = KXXDrawer_Swift;
+			sourceTree = "<group>";
+		};
+		4135818E1C11D15F002688E9 /* KXXDrawer_SwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				4135818F1C11D15F002688E9 /* KXXDrawer_SwiftTests.swift */,
+				413581911C11D15F002688E9 /* Info.plist */,
+			);
+			path = KXXDrawer_SwiftTests;
+			sourceTree = "<group>";
+		};
+		413581991C11D15F002688E9 /* KXXDrawer_SwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4135819A1C11D15F002688E9 /* KXXDrawer_SwiftUITests.swift */,
+				4135819C1C11D15F002688E9 /* Info.plist */,
+			);
+			path = KXXDrawer_SwiftUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		413581761C11D15F002688E9 /* KXXDrawer_Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4135819F1C11D15F002688E9 /* Build configuration list for PBXNativeTarget "KXXDrawer_Swift" */;
+			buildPhases = (
+				413581731C11D15F002688E9 /* Sources */,
+				413581741C11D15F002688E9 /* Frameworks */,
+				413581751C11D15F002688E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KXXDrawer_Swift;
+			productName = KXXDrawer_Swift;
+			productReference = 413581771C11D15F002688E9 /* KXXDrawer_Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4135818A1C11D15F002688E9 /* KXXDrawer_SwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 413581A21C11D15F002688E9 /* Build configuration list for PBXNativeTarget "KXXDrawer_SwiftTests" */;
+			buildPhases = (
+				413581871C11D15F002688E9 /* Sources */,
+				413581881C11D15F002688E9 /* Frameworks */,
+				413581891C11D15F002688E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4135818D1C11D15F002688E9 /* PBXTargetDependency */,
+			);
+			name = KXXDrawer_SwiftTests;
+			productName = KXXDrawer_SwiftTests;
+			productReference = 4135818B1C11D15F002688E9 /* KXXDrawer_SwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		413581951C11D15F002688E9 /* KXXDrawer_SwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 413581A51C11D15F002688E9 /* Build configuration list for PBXNativeTarget "KXXDrawer_SwiftUITests" */;
+			buildPhases = (
+				413581921C11D15F002688E9 /* Sources */,
+				413581931C11D15F002688E9 /* Frameworks */,
+				413581941C11D15F002688E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				413581981C11D15F002688E9 /* PBXTargetDependency */,
+			);
+			name = KXXDrawer_SwiftUITests;
+			productName = KXXDrawer_SwiftUITests;
+			productReference = 413581961C11D15F002688E9 /* KXXDrawer_SwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4135816F1C11D15F002688E9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = asahi_kuang;
+				TargetAttributes = {
+					413581761C11D15F002688E9 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					4135818A1C11D15F002688E9 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 413581761C11D15F002688E9;
+					};
+					413581951C11D15F002688E9 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 413581761C11D15F002688E9;
+					};
+				};
+			};
+			buildConfigurationList = 413581721C11D15F002688E9 /* Build configuration list for PBXProject "KXXDrawer_Swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4135816E1C11D15F002688E9;
+			productRefGroup = 413581781C11D15F002688E9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				413581761C11D15F002688E9 /* KXXDrawer_Swift */,
+				4135818A1C11D15F002688E9 /* KXXDrawer_SwiftTests */,
+				413581951C11D15F002688E9 /* KXXDrawer_SwiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		413581751C11D15F002688E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				413581851C11D15F002688E9 /* LaunchScreen.storyboard in Resources */,
+				413581821C11D15F002688E9 /* Assets.xcassets in Resources */,
+				41F38E581C12C81F00DC6152 /* MainTableViewCell.xib in Resources */,
+				413581801C11D15F002688E9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		413581891C11D15F002688E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		413581941C11D15F002688E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		413581731C11D15F002688E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41F38E541C12A2EE00DC6152 /* ArrayDataSource.swift in Sources */,
+				413581AB1C11D1F4002688E9 /* MainViewController.swift in Sources */,
+				4135817B1C11D15F002688E9 /* AppDelegate.swift in Sources */,
+				41F38E5A1C12D61600DC6152 /* NewPushViewController.swift in Sources */,
+				413581A91C11D1EB002688E9 /* LeftViewController.swift in Sources */,
+				41F38E571C12C81F00DC6152 /* MainTableViewCell.swift in Sources */,
+				413581AD1C11D200002688E9 /* LeftSlideViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		413581871C11D15F002688E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				413581901C11D15F002688E9 /* KXXDrawer_SwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		413581921C11D15F002688E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4135819B1C11D15F002688E9 /* KXXDrawer_SwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4135818D1C11D15F002688E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 413581761C11D15F002688E9 /* KXXDrawer_Swift */;
+			targetProxy = 4135818C1C11D15F002688E9 /* PBXContainerItemProxy */;
+		};
+		413581981C11D15F002688E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 413581761C11D15F002688E9 /* KXXDrawer_Swift */;
+			targetProxy = 413581971C11D15F002688E9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4135817E1C11D15F002688E9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4135817F1C11D15F002688E9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		413581831C11D15F002688E9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				413581841C11D15F002688E9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4135819D1C11D15F002688E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4135819E1C11D15F002688E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		413581A01C11D15F002688E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KXXDrawer_Swift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.asahi.KXXDrawer-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		413581A11C11D15F002688E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KXXDrawer_Swift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.asahi.KXXDrawer-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		413581A31C11D15F002688E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KXXDrawer_SwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.asahi.KXXDrawer-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KXXDrawer_Swift.app/KXXDrawer_Swift";
+			};
+			name = Debug;
+		};
+		413581A41C11D15F002688E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KXXDrawer_SwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.asahi.KXXDrawer-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KXXDrawer_Swift.app/KXXDrawer_Swift";
+			};
+			name = Release;
+		};
+		413581A61C11D15F002688E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KXXDrawer_SwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.asahi.KXXDrawer-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = KXXDrawer_Swift;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		413581A71C11D15F002688E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KXXDrawer_SwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.asahi.KXXDrawer-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = KXXDrawer_Swift;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		413581721C11D15F002688E9 /* Build configuration list for PBXProject "KXXDrawer_Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4135819D1C11D15F002688E9 /* Debug */,
+				4135819E1C11D15F002688E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4135819F1C11D15F002688E9 /* Build configuration list for PBXNativeTarget "KXXDrawer_Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				413581A01C11D15F002688E9 /* Debug */,
+				413581A11C11D15F002688E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		413581A21C11D15F002688E9 /* Build configuration list for PBXNativeTarget "KXXDrawer_SwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				413581A31C11D15F002688E9 /* Debug */,
+				413581A41C11D15F002688E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		413581A51C11D15F002688E9 /* Build configuration list for PBXNativeTarget "KXXDrawer_SwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				413581A61C11D15F002688E9 /* Debug */,
+				413581A71C11D15F002688E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4135816F1C11D15F002688E9 /* Project object */;
+}
