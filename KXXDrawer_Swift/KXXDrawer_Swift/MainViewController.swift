@@ -27,6 +27,7 @@ class MainViewController: UIViewController, UITableViewDelegate {
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        self.tableView!.userInteractionEnabled = true
         self.swipe!.direction = UISwipeGestureRecognizerDirection.Right
     }
     override func didReceiveMemoryWarning() {
