@@ -68,8 +68,6 @@ class MainViewController: UIViewController, UITableViewDelegate {
         self.tableView?.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
         self.view .addSubview(self.tableView!)
         
-        
-        
         let block : cellConfigureBlock? = {
             cell, item in
             (cell as! MainTableViewCell).titleLb.text = (item as! String)

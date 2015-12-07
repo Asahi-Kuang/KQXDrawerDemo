@@ -54,7 +54,7 @@ class LeftViewController: UIViewController, UITableViewDelegate {
         
         let block: cellConfigureBlock? = {
             cell, item in
-            
+
             let myCell = (cell as! UITableViewCell)
             let title = (item as! String)
             
@@ -71,7 +71,7 @@ class LeftViewController: UIViewController, UITableViewDelegate {
         self.tableView!.dataSource = self.dataSource
         self.view.addSubview(self.tableView!)
     }
-    
+
     // MARK: - UITableViewDelegate
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
