@@ -13,7 +13,7 @@ class MainViewController: UIViewController, UITableViewDelegate {
 
     var tableView: UITableView?
     var dataSource: ArrayDataSource?
-    var dataArray: NSMutableArray?
+    var dataArray: Array<AnyObject>?
     var swipe: UISwipeGestureRecognizer?
     // mark: - life cycle
     override func viewDidLoad() {
@@ -75,8 +75,7 @@ class MainViewController: UIViewController, UITableViewDelegate {
             (cell as! MainTableViewCell).titleLb.text = (item as! String)
         }
         
-        let tempArr = ["Objective-C", "Swift", "Javascript", "SQLite", "Python", "HTML5", "C++", "..."]
-        self.dataArray = NSMutableArray.init(array: tempArr)
+        self.dataArray =  ["Objective-C", "Swift", "Javascript", "SQLite", "Python", "HTML5", "C++", "..."]
         self.dataSource = ArrayDataSource(items:self.dataArray!, reuseIdentifier:reuseIdentifier, cellBlock:block, isSys:false)
         self.tableView?.dataSource = self.dataSource
     }

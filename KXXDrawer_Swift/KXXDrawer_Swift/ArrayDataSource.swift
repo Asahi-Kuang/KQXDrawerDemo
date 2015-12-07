@@ -14,11 +14,11 @@ typealias cellConfigureBlock = (AnyObject, AnyObject) ->Void
 class ArrayDataSource: UIViewController, UITableViewDataSource {
     
     var identifier  : String?
-    var dataArray   : NSArray?
+    var dataArray   : Array<AnyObject>?
     var block       : cellConfigureBlock?
     var isSystemCell: Bool?
   // 构造方法
-    init(items: NSArray, reuseIdentifier: String?, cellBlock: cellConfigureBlock?, isSys: Bool?) {
+    init(items: Array<AnyObject>, reuseIdentifier: String?, cellBlock: cellConfigureBlock?, isSys: Bool?) {
         self.dataArray    = items
         self.identifier   = reuseIdentifier
         self.isSystemCell = isSys
@@ -54,7 +54,7 @@ class ArrayDataSource: UIViewController, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let item = self.dataArray?.objectAtIndex(indexPath.row)
+        let item = self.dataArray?[indexPath.row]
         if self.isSystemCell == true {
             var cell = tableView.dequeueReusableCellWithIdentifier(self.identifier!)
             if cell == nil {

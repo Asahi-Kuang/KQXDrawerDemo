@@ -11,7 +11,7 @@ import UIKit
 let reuseIdentifierr = "identifier"
 class LeftViewController: UIViewController, UITableViewDelegate {
     var tableView: UITableView?
-    var dataArray: NSMutableArray?
+    var dataArray: Array<AnyObject>?
     var dataSource: ArrayDataSource?
     // MARK: - life cycle
     override func viewDidLoad() {
@@ -54,21 +54,25 @@ class LeftViewController: UIViewController, UITableViewDelegate {
         
         let block: cellConfigureBlock? = {
             cell, item in
-            (cell as! UITableViewCell).textLabel!.text = (item as! String)
-            (cell as! UITableViewCell).textLabel!.font = UIFont.boldSystemFontOfSize(18)
-            (cell as! UITableViewCell).textLabel!.textColor = UIColor(red: 43/255.0, green: 60/255.0, blue: 47/255.0, alpha: 1)
-            (cell as! UITableViewCell).backgroundColor = UIColor.clearColor()
+            
+            let myCell = (cell as! UITableViewCell)
+            let title = (item as! String)
+            
+            myCell.textLabel?.text = title
+            myCell.textLabel?.font = UIFont.boldSystemFontOfSize(18)
+            myCell.textLabel?.textColor = UIColor(red: 43/255.0, green: 60/255.0, blue: 47/255.0, alpha: 1)
+            myCell.backgroundColor = UIColor.clearColor()
         }
         
-        let tempArray = ["我的主页", "我的圈子", "AcFun", "Bilibili", "更换主题", "设置", "退出"]
-        self.dataArray = NSMutableArray.init(array: tempArray)
+        
+        self.dataArray = ["我的主页", "我的圈子", "AcFun", "Bilibili", "更换主题", "设置", "退出"]
         
         self.dataSource = ArrayDataSource(items: self.dataArray!, reuseIdentifier: reuseIdentifierr, cellBlock: block, isSys: true)
         self.tableView!.dataSource = self.dataSource
         self.view.addSubview(self.tableView!)
     }
     
-    // MARK: UITableViewDelegate
+    // MARK: - UITableViewDelegate
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
         let appdelegate = UIApplication.sharedApplication().delegate as! AppDelegate
