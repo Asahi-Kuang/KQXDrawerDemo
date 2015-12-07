@@ -79,7 +79,6 @@ class MainViewController: UIViewController, UITableViewDelegate {
         self.dataArray = NSMutableArray.init(array: tempArr)
         self.dataSource = ArrayDataSource(items:self.dataArray!, reuseIdentifier:reuseIdentifier, cellBlock:block, isSys:false)
         self.tableView?.dataSource = self.dataSource
-        self.tableView?.reloadData()
     }
     
     // MARK: - selector
