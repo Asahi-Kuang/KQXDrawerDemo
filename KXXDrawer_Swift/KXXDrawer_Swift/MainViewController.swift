@@ -20,10 +20,10 @@ class MainViewController: UIViewController, UITableViewDelegate {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        self.createUI()
-        self.setUpTableView()
+        createUI()
+        setUpTableView()
         // 注册cell
-        self.tableView?.registerNib(UINib(nibName: "MainTableViewCell", bundle: nil), forCellReuseIdentifier: reuseIdentifier)
+        tableView?.registerNib(UINib(nibName: "MainTableViewCell", bundle: nil), forCellReuseIdentifier: reuseIdentifier)
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)

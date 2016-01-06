@@ -80,7 +80,7 @@ class LeftSlideViewController: UIViewController {
         self.view.addSubview(self.leftVC!.view)
         self.view.addSubview(self.mainVC!.view)
 
-        UIView.animateWithDuration(0.8, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.6, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
+        UIView.animateWithDuration(0.8, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.6, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
             //
             self.mainVC?.view.transform = CGAffineTransformMakeScale(0.65, 0.65)
             self.mainVC?.view.center    = CGPointMake(CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame)/2)
@@ -98,7 +98,7 @@ class LeftSlideViewController: UIViewController {
     
     func closeLeftSlideViewController() {
         print("closed...");
-        UIView.animateWithDuration(0.8, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.6, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
+        UIView.animateWithDuration(0.8, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.6, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
             //
             self.mainVC?.view.transform = CGAffineTransformMakeScale(1, 1)
             self.mainVC?.view.center    = CGPointMake(CGRectGetWidth(self.view.frame)/2, CGRectGetHeight(self.view.frame)/2)
